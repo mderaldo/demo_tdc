@@ -6,4 +6,5 @@ gem "kitchen-docker"
 gem 'chefspec', require: 'chefspec'
 gem 'rspec', require: 'rspec'
 gem 'rubocop'
+gem 'foodcritic'
 
