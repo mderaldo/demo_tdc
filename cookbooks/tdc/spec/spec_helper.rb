@@ -1,7 +1,4 @@
-# Added by ChefSpec
-require 'chefspec'
-
-require 'rspec/core'
+require 'rspec/core' unless defined? RSpec.configure
 require 'chefspec'
 
 
@@ -10,20 +7,20 @@ require 'chefspec'
 
 RSpec.configure do |config|
   # Specify the path for Chef Solo to find cookbooks
-  # config.cookbook_path = '/var/cookbooks'
+  config.cookbook_path = '/var/cookbooks'
 
   # Specify the path for Chef Solo to find roles
-  # config.role_path = '/var/roles'
+  config.role_path = '/var/roles'
 
   # Specify the Chef log_level (default: :warn)
-  # config.log_level = :debug
+  config.log_level = :debug
 
   # Specify the path to a local JSON file with Ohai data
   # config.path = 'ohai.json'
 
   # Specify the operating platform to mock Ohai data from
-  # config.platform = 'ubuntu'
+  config.platform = 'ubuntu'
 
   # Specify the operating version to mock Ohai data from
-  # config.version = '12.04'
+  config.version = '14.04'
 end

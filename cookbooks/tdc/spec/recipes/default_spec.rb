@@ -1,4 +1,4 @@
-require_relative '../spec_helper'
+require 'spec_helper'
 
 describe 'tdc::default' do
   cached(:chef_run) { ChefSpec::SoloRunner.new.converge(described_recipe) }
