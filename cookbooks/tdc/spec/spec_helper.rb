@@ -13,7 +13,7 @@ RSpec.configure do |config|
   config.role_path = '/var/roles'
 
   # Specify the Chef log_level (default: :warn)
-  config.log_level = :debug
+  config.log_level = :warn
 
   # Specify the path to a local JSON file with Ohai data
   # config.path = 'ohai.json'
