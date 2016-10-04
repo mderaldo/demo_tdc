@@ -1,1 +1,4 @@
 */nodes/123.123.123.123.json
+
+*/.kitchen/
+*/Gemfile.lock
