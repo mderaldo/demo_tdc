@@ -1,20 +1,31 @@
 require_relative '../spec_helper'
 
 describe 'tdc::default' do
-  subject { ChefSpec::Runner.new.converge(described_recipe) }
+  cached(:chef_run) { ChefSpec::SoloRunner.new.converge(described_recipe) }
 
-  # Write quick specs using `it` blocks with implied subjects
-  it { should do_something('...') }
-
-  # Write full examples using the `expect` syntax
-  it 'does something' do
-    expect(subject).to do_something('...')
+  it 'executes apt-get update' do
+    expect(chef_run).to run_execute('apt-get update')
   end
 
-  # Use an explicit subject
-  let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
-
-  it 'does something' do
-    expect(chef_run).to do_something('...')
+  it 'install telnet package' do
+   expect(chef_run).to install_package('telnet')
   end
+
+  it 'instal postfix package' do
+    expect(chef_run).to install_package('postfix')
+  end
+
+  it 'install curl package' do
+   expect(chef_run).to install_package('curl')
+  end
+
+  it 'instal postfix package' do
+    expect(chef_run).to install_package('git-core')
+  end
+
+  it 'instal postfix package' do
+    expect(chef_run).to install_package('tree')
+  end
+
+  
 end
