@@ -2,10 +2,12 @@ source "https://rubygems.org"
 
 gem 'berkshelf'
 gem "docker"
-gem "test-kitchen"
+gem 'berkshelf'
+gem 'chefspec'
+gem 'kitchen'
 gem "kitchen-docker"
-gem 'chefspec', require: 'chefspec'
-gem 'rspec', require: 'rspec'
+gem 'kitchen-nodes'
+gem 'knife-spork'
 gem 'rubocop'
 gem 'foodcritic'
-
+gem 'serverspec'
